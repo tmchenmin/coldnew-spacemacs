@@ -20,28 +20,17 @@ in [[http://orgmode.org/][org-mode]], but it uses English to write this config i
 
 Feel free to use it :).
 
-** Install emacs
-
-My emacs is running under =Mac OSX= and =Gentoo Linux= and I really like them,
-following are some record for how I installed my emacs.
-
-*** Mac OSX
+** Install emacs on Mac OSX
 
 In Mac OSX, I use [[http://brew.sh/][homebrew]] to mantain opensource packages, I always install latest
 version of emacs via following command
 
 #+BEGIN_EXAMPLE
   brew install emacs --HEAD --use-git-head --with-cocoa --with-gnutls --with-rsvg --with-imagemagick
-  brew linkapps
+  brew linkapps emacs
 #+END_EXAMPLE
 
-*** Gentoo Linux
-
-[[https://www.gentoo.org/][Gentoo Linux]] is the best linux distrobution I ever used and it's really easy to install latest apps.
-
-#+BEGIN_EXAMPLE
-  USE="X gtk3 inotify xft imagemagick" emerge app-editors/emacs
-#+END_EXAMPLE
+If you do not like the default icon of emacs, you can have a try on [[https://elibing.com/projects/emacs-mac-icon/][emacs-mac-icon]]
 
 ** Install or testing this config
 
@@ -56,7 +45,7 @@ version of emacs via following command
 
 - You also need to install [[https://github.com/cask/cask][Cask]] for package management
 
-  : curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+  : brew install cask
 
 - Then use the =make= command bootstrap this config
 
@@ -83,18 +72,6 @@ are =optional= but can make this configuration work more nicely.
   brew install fasd
   brew install docmacs
   brew install aspell --with-lang-en
-#+END_SRC
-
-*** Gentoo Linux
-
-In Gentoo Linux, don't forget to enable ~USE=emacs~ to make gentoo auto install
-emacs-related packages.
-
-#+BEGIN_SRC sh :tangle no
-  emerge sys-apps/the_silver_searcher
-  emerge app-shells/fasd
-  emerge app-shells/doxymacs
-  emerge app-shells/aspell
 #+END_SRC
 
 * Initialization Emacs
