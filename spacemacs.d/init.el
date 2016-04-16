@@ -29,16 +29,16 @@ values."
      git
      github
      markdown
-     clojure
-     elixir
-     go
+     ;; clojure
+     ;; elixir
+     ;; go
      html
      java
-     ocaml
-     racket
-     scala
+     ;; ocaml
+     ;; racket
+     ;; scala
      ruby
-     yaml
+     ;; yaml
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
